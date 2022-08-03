@@ -1,14 +1,25 @@
-#include <string>
 #include <iostream>
-
+#include "Referee.h"
 #include "Human.h"
+#include "Computer.h"
 
 using namespace std;
 
-Human::Human(){};
+Referee::Referee(){};
 
-char Human::makeMove(){
-    return type;
+char refGame(Human player1, Computer player2){
+
+    char P1 = player1::makeMove;
+    char P2 = player2::makeMove;
+
+    if(P1 == "P"){
+        reutrn "W";
+    }else if(P1 == "R"){
+        return "T";
+    }else{
+        return "L";
+    };
+
 };
 
-Human::~Human(){};
+Referee::~Referee(){};

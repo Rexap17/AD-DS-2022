@@ -1,14 +1,13 @@
-#include <string>
 #include <iostream>
-
-#include "Human.h"
+#include "Computer.h"
 
 using namespace std;
 
-Human::Human(){};
+Computer::Computer(){};
 
-char Human::makeMove(){
-    return type;
+char Computer::makeMove(){
+    char move = "P";
+    return move;
 };
 
-Human::~Human(){};
+Computer::~Computer(){};

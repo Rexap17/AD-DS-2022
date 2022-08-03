@@ -1,20 +1,16 @@
-#ifndef HUMAN_H
-#define HUMAN_H
-
-#include <string>
+#ifndef REFEREE_H
+#define REFEREE_H
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-class Human{
-
-    protected:
-
-        int rand;
+class Referee{
 
     public:
-        Human();
-        ~Human();
+        Referee();
+        char refGame();
+        ~Referee();
 };
 
 #endif

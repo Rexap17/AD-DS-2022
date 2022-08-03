@@ -1,7 +1,5 @@
 #ifndef HUMAN_H
 #define HUMAN_H
-
-#include <string>
 #include <iostream>
 
 using namespace std;
@@ -9,11 +7,11 @@ using namespace std;
 class Human{
 
     protected:
-
         int rand;
 
     public:
         Human();
+        char makeMove();
         ~Human();
 };
 

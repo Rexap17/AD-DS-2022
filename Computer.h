@@ -1,20 +1,17 @@
-#ifndef HUMAN_H
-#define HUMAN_H
-
-#include <string>
+#ifndef COMPUTER_H
+#define COMPUTER_H
 #include <iostream>
 
 using namespace std;
 
-class Human{
+class Computer{
 
     protected:
-
         int rand;
 
     public:
-        Human();
-        ~Human();
+        Computer();
+        ~Computer();
 };
 
 #endif
