@@ -11,6 +11,7 @@ class Computer{
 
     public:
         Computer();
+        char makeMove();
         ~Computer();
 };
 
