@@ -14,6 +14,7 @@ class Referee{
 
         Referee(char,char);
         char refGame();
+        char refGame(char, char);
         ~Referee();
 };
 

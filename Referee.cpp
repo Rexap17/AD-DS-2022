@@ -23,4 +23,16 @@ char Referee::refGame(){
 
 };
 
+char Referee::refGame(char P1, char P2){
+
+    if(P1 == 'P'){
+        return 'W';
+    }else if(P1 == 'R'){
+        return 'T';
+    }else{
+        return 'L';
+    };
+
+};
+
 Referee::~Referee(){};

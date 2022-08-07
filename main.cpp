@@ -19,6 +19,9 @@ int main(){
     cout << cMove << endl;*/
 
     Referee g1(hMove, cMove);
+
     cout << g1.refGame() << endl;
+    cout << g1.refGame(hMove,cMove) << endl;
+
     return 0;
 }
