@@ -6,7 +6,12 @@ using namespace std;
 Computer::Computer(){};
 
 char Computer::makeMove(){
-    char move = 'R';
+    move = 'R';
+    player2 = move;
+    return move;
+};
+
+char Computer::getMove(){
     return move;
 };
 

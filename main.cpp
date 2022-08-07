@@ -22,6 +22,7 @@ int main(){
 
     cout << g1.refGame() << endl;
     cout << g1.refGame(hMove,cMove) << endl;
+    cout << g1.refGame(h1.player1, c1.player2) << endl;
 
     return 0;
 }

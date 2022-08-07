@@ -35,4 +35,19 @@ char Referee::refGame(char P1, char P2){
 
 };
 
+char refGame(Human player1, Computer player2){
+
+    char P1 = player1.getMove();
+    char P2 = player2.getMove();
+
+    if(P1 == 'P'){
+        return 'W';
+    }else if(P1 == 'R'){
+        return 'T';
+    }else{
+        return 'L';
+    };
+
+};
+
 Referee::~Referee(){};

@@ -6,10 +6,14 @@ using namespace std;
 Human::Human(){};
 
 char Human::makeMove(){
-    char move;
     cout << "Enter move: ";
     cin >> move;
     move = toupper(move);
+    player1 = move;
+    return move;
+};
+
+char Human::getMove(){
     return move;
 };
 

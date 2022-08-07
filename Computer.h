@@ -8,10 +8,14 @@ class Computer{
 
     protected:
         int rand;
+        char move;
 
     public:
+        char player2;
+
         Computer();
         char makeMove();
+        char getMove();
         ~Computer();
 };
 
