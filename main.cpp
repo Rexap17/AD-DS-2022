@@ -9,7 +9,7 @@
 using namespace std;
 
 int main(){
-    
+
     Human h1;
     Computer c1;
 

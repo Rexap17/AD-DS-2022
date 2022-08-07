@@ -42,10 +42,11 @@ char Referee::refGame(char P1, char P2){
 
 char refGame(Human player1, Computer player2){
 
+    cout << player1.getMove() << player2.getMove() << endl;
+    cout << "hello?" << endl;
+    
     char P1 = player1.getMove();
     char P2 = player2.getMove();
-
-    cout << "result: " << P1 << P2 << endl;
 
     if(P1 == 'P'){
         return 'W';
