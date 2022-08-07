@@ -3,57 +3,21 @@
 
 using namespace std;
 
-Referee::Referee(){
+Referee::Referee(){};
 
-    Human h1;
-    Computer c1;
+char Referee::refGame(Human player1, Computer player2){
 
-    hMove = h1.makeMove();
-    cMove = c1.makeMove();
+    hMove = player1.makeMove();
+    cMove = player2.makeMove();
 
-};
-
-char Referee::refGame(){
-
-    char P1 = hMove;
-    char P2 = cMove;
-
-    if(P1 == 'P'){
+    if(hMove == 'P'){
         return 'W';
-    }else if(P1 == 'R'){
+    }else if(hMove == 'R'){
         return 'T';
-    }else{
+    }else if(hMove == 'S'){
         return 'L';
-    };
-
-};
-
-char Referee::refGame(char P1, char P2){
-
-    if(P1 == 'P'){
-        return 'W';
-    }else if(P1 == 'R'){
-        return 'T';
     }else{
-        return 'L';
-    };
-
-};
-
-char refGame(Human player1, Computer player2){
-
-    cout << player1.getMove() << player2.getMove() << endl;
-    cout << "hello?" << endl;
-    
-    char P1 = player1.getMove();
-    char P2 = player2.getMove();
-
-    if(P1 == 'P'){
-        return 'W';
-    }else if(P1 == 'R'){
-        return 'T';
-    }else{
-        return 'L';
+        return 0;
     };
 
 };

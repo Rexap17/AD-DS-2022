@@ -7,14 +7,10 @@ using namespace std;
 class Human{
 
     protected:
-        int rand;
         char move;
-
     public:
-        char player1;
         Human();
         char makeMove();
-        char getMove();
         ~Human();
 };
 

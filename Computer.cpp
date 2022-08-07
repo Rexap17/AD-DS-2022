@@ -7,11 +7,6 @@ Computer::Computer(){};
 
 char Computer::makeMove(){
     move = 'R';
-    player2 = move;
-    return move;
-};
-
-char Computer::getMove(){
     return move;
 };
 

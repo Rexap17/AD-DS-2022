@@ -6,15 +6,14 @@
 
 using namespace std;
 
-class Referee:public Human,public Computer{
+class Referee{
 
     public:
+
         char hMove;
         char cMove;
 
         Referee();
-        char refGame();
-        char refGame(char, char);
         char refGame(Human player1, Computer player2);
         ~Referee();
 };
