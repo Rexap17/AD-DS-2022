@@ -12,7 +12,7 @@ class Referee:public Human,public Computer{
         char hMove;
         char cMove;
 
-        Referee(char,char);
+        Referee();
         char refGame();
         char refGame(char, char);
         char refGame(Human player1, Computer player2);

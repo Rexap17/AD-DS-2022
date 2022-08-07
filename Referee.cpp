@@ -3,9 +3,14 @@
 
 using namespace std;
 
-Referee::Referee(char m1,char m2){
-    hMove = m1;
-    cMove = m2;
+Referee::Referee(){
+
+    Human h1;
+    Computer c1;
+
+    hMove = h1.makeMove();
+    cMove = c1.makeMove();
+
 };
 
 char Referee::refGame(){
@@ -39,6 +44,8 @@ char refGame(Human player1, Computer player2){
 
     char P1 = player1.getMove();
     char P2 = player2.getMove();
+
+    cout << "result: " << P1 << P2 << endl;
 
     if(P1 == 'P'){
         return 'W';
