@@ -9,8 +9,11 @@ using namespace std;
 class Referee{
 
     public:
-        Referee();
-        char refGame(char p1,char p2);
+        char hMove;
+        char cMove;
+
+        Referee(char,char);
+        char refGame();
         ~Referee();
 };
 

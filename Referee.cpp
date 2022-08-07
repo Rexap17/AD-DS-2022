@@ -3,12 +3,15 @@
 
 using namespace std;
 
-Referee::Referee(){};
+Referee::Referee(char m1,char m2){
+    hMove = m1;
+    cMove = m2;
+};
 
-char refGame(Human player1, Computer player2){
+char Referee::refGame(){
 
-    char P1 = player1.makeMove();
-    //player2.makeMove();
+    char P1 = hMove;
+    char P2 = cMove;
 
     if(P1 == 'P'){
         return 'W';

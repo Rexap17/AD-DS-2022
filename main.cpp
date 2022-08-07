@@ -9,14 +9,16 @@
 using namespace std;
 
 int main(){
-    Referee g1;
     Human h1;
     Computer c1;
+
     char hMove, cMove;
     hMove = h1.makeMove();
     cMove = c1.makeMove();
-    cout << hMove << endl;
-    cout << cMove << endl;
-   //cout << g1.refGame(hMove,cMove) << endl;
+    /*cout << hMove << endl;
+    cout << cMove << endl;*/
+
+    Referee g1(hMove, cMove);
+    cout << g1.refGame() << endl;
     return 0;
 }

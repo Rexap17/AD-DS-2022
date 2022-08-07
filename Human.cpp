@@ -9,13 +9,7 @@ char Human::makeMove(){
     char move;
     cout << "Enter move: ";
     cin >> move;
-    while(!cin){
-        cout << "Incorrect input, you must enter one character\n" << endl;
-        cout << "Enter move: ";
-        cin.clear();
-        cin.ignore(256,'\n');
-        cin >> move;
-    }
+    move = toupper(move);
     return move;
 };
 
