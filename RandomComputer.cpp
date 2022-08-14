@@ -1,36 +1,26 @@
 #include <iostream>
-#include "Computer.h"
+#include "RandomComputer.h"
 
 using namespace std;
 
-class RandomComputer:public Computer{
+
+RandomComputer::RandomComputer() {};
     
-public:
-    RandomComputer() {};
-    
-    char makeMove() {
-        int randNum;
-        randNum = rand() % 3;
-        char move;
+char RandomComputer::makeMove() {
+    int randNum;
+    char move;
+    randNum = rand() % 3;
 
-        /*int temp;
-        for (int i = 0; i < 10; i++) {
-            temp = rand() % 3;
-            cout << "Rand: " << temp << endl;
-        }*/
-
-        if (randNum == 0) {
-            move = 'R';
-        }
-        else if(randNum == 1) {
-            move = 'P';
-        }
-        else if(randNum == 2){
-            move = 'S';
-        }
-        cout << move << endl;
-        return move;
-    };
-
-    ~RandomComputer() {};
+    if (randNum == 0) {
+        move = 'R';
+    }
+    else if(randNum == 1) {
+        move = 'P';
+    }
+    else if(randNum == 2){
+        move = 'S';
+    }
+    return move;
 };
+
+RandomComputer::~RandomComputer() {};
