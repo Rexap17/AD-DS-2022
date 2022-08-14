@@ -8,8 +8,6 @@ using namespace std;
 RandomComputer::RandomComputer() {};
     
 char RandomComputer::makeMove() {
-    int randNum;
-    char move;
     randNum = rand() % 3;
 
     if (randNum == 0) {

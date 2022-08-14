@@ -9,7 +9,6 @@ char Referee::refGame(Human player1, Computer player2){
 
     hMove = player1.makeMove();
     cMove = player2.makeMove();
-    int result;
 
     if(hMove == 'P'){
         switch (cMove) {

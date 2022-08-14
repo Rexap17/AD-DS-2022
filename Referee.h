@@ -7,12 +7,12 @@
 using namespace std;
 
 class Referee{
+    private:
+    int result;
+    char hMove;
+    char cMove;
 
     public:
-
-        char hMove;
-        char cMove;
-
         Referee();
         char refGame(Human player1, Computer player2);
         ~Referee();

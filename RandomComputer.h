@@ -9,6 +9,7 @@ using namespace std;
 class RandomComputer :public Computer {
 
 protected:
+    int randNum;
     char move;
 public:
     RandomComputer();
