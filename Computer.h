@@ -1,17 +1,17 @@
-#ifndef HUMAN_H
-#define HUMAN_H
+#ifndef COMPUTER_H
+#define COMPUTER_H
 #include <iostream>
 
 using namespace std;
 
-class Human{
+class Computer{
 
     protected:
         char move;
     public:
-        Human();
+        Computer();
         char makeMove();
-        ~Human();
+        ~Computer();
 };
 
 #endif
