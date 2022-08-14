@@ -36,7 +36,7 @@ Player* Tournament::versus(Player* comp1, Player* comp2) {
 Player* Tournament::run(array<Player*, 8>  competitors) {
 
     for (int z=0; z<=6; z+=2) {
-        semi.at(z/2) = a_against_b(competitors.at(z), competitors.at(z+1));
+        semi.at(z/2) = versus(competitors.at(z), competitors.at(z+1));
     }
 
     for (int y=0; y<=2; y+=2) {
