@@ -1,27 +1,24 @@
 #include <iostream>
 #include "Computer.h"
+#include "FistfullODollars.h"
 
 using namespace std;
 
-class FistfullODollars :public Computer{
-    
-public:
-    int randNum = 0;
-    char move;
-    FistfullODollars() {};
-
-    char makeMove() {
-        if (randNum % 3 == 0) {
-            move = 'P';
-        }
-        else if(randNum % 2 == 0) {
-            move = 'P';
-        }
-        else if(randNum % 1 == 0){
-            move = 'R';
-        }
-        return move;
-    };
-
-    ~FistfullODollars() {};
+FistfullODollars::FistfullODollars() {
+    randNum = 0;
 };
+
+char FistfullODollars::makeMove() {
+    if (randNum % 3 == 0) {
+        move = 'P';
+    }
+    else if(randNum % 2 == 0) {
+        move = 'P';
+    }
+    else if(randNum % 1 == 0){
+        move = 'R';
+    }
+    return move;
+};
+
+FistfullODollars::~FistfullODollars() {};

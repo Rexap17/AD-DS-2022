@@ -1,17 +1,15 @@
 #include <iostream>
 #include "Computer.h"
+#include "Bureaucrat.h"
 
 using namespace std;
 
-class Bureaucrat :public Computer{
-    
-public:
-    Bureaucrat() {};
 
-    char makeMove() {
-        char move = 'P';
-        return move;
-    };
+Bureaucrat::Bureaucrat() {};
 
-    ~Bureaucrat() {};
+char Bureaucrat::makeMove() {
+    char move = 'P';
+    return move;
 };
+
+Bureaucrat::~Bureaucrat() {};

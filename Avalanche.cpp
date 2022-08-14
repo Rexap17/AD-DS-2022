@@ -1,12 +1,8 @@
 #include <iostream>
 #include "Computer.h"
+#include "Avalanche.h"
 
 using namespace std;
 
-class Avalanche:public Computer{
-    
-public:
-    Avalanche() {};
-
-    ~Avalanche() {};
-};
+Avalanche::Avalanche() {};
+Avalanche::~Avalanche() {};

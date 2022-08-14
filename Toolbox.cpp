@@ -1,17 +1,14 @@
 #include <iostream>
 #include "Computer.h"
+#include "Toolbox.h"
 
 using namespace std;
 
-class Toolbox :public Computer{
-    
-public:
-    Toolbox() {};
+Toolbox::Toolbox() {};
 
-    char makeMove() {
-        char move = 'S';
-        return move;
-    };
-
-    ~Toolbox() {};
+char Toolbox::makeMove() {
+    char move = 'S';
+    return move;
 };
+
+Toolbox::~Toolbox() {};

@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Computer.h"
 #include "RandomComputer.h"
 
 using namespace std;
