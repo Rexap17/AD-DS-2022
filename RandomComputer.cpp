@@ -22,4 +22,8 @@ char RandomComputer::makeMove() {
     return move;
 };
 
+string RandomComputer::getName() {
+    return "RandomComputer";
+}
+
 RandomComputer::~RandomComputer() {};

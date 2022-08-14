@@ -12,4 +12,8 @@ char Bureaucrat::makeMove() {
     return move;
 };
 
+string Bureaucrat::getName() {
+    return "Bureaucrat";
+}
+
 Bureaucrat::~Bureaucrat() {};

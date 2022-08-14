@@ -14,6 +14,7 @@ protected:
 public:
     RandomComputer();
     char makeMove();
+    string getName();
     ~RandomComputer();
 };
 

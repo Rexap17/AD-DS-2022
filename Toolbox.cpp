@@ -11,4 +11,8 @@ char Toolbox::makeMove() {
     return move;
 };
 
+string Toolbox::getName() {
+    return "Toolbox";
+}
+
 Toolbox::~Toolbox() {};

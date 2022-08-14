@@ -9,6 +9,7 @@ FistfullODollars::FistfullODollars() {
 };
 
 char FistfullODollars::makeMove() {
+    randNum++;
     if (randNum % 3 == 0) {
         move = 'P';
     }
@@ -20,5 +21,13 @@ char FistfullODollars::makeMove() {
     }
     return move;
 };
+
+string FistfullODollars::getName() {
+    return "FistfullODollars";
+}
+
+void FistfullODollars::reset() {
+    randNum = 0;
+}
 
 FistfullODollars::~FistfullODollars() {};

@@ -9,6 +9,7 @@ PaperDoll::PaperDoll() {
 };
 
 char PaperDoll::makeMove() {
+    randNum++;
     if (randNum % 3 == 0) {
         move = 'S';
     }
@@ -20,5 +21,13 @@ char PaperDoll::makeMove() {
     }
     return move;
 };
+
+string PaperDoll::getName() {
+    return "PaperDoll";
+}
+
+void PaperDoll::reset() {
+    randNum = 0;
+}
 
 PaperDoll::~PaperDoll() {};

@@ -12,6 +12,7 @@ protected:
     char move;
 public:
     Avalanche();
+    string getName();
     ~Avalanche();
 };
 

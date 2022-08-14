@@ -14,6 +14,8 @@ protected:
 public:
     PaperDoll();
     char makeMove();
+    string getName();
+    void reset();
     ~PaperDoll();
 };
 

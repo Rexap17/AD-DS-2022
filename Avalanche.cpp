@@ -5,4 +5,7 @@
 using namespace std;
 
 Avalanche::Avalanche() {};
+string Avalanche::getName() {
+    return "Avalanche";
+}
 Avalanche::~Avalanche() {};

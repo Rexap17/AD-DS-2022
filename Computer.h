@@ -10,7 +10,9 @@ class Computer{
         char move;
     public:
         Computer();
-        char makeMove();
+        virtual char makeMove();
+        virtual string getName();
+        virtual void reset();
         ~Computer();
 };
 

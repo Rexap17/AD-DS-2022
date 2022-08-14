@@ -2,15 +2,30 @@
 #define TOURNAMENT_H
 #include <iostream>
 
+#include "Player.h"
+#include "Referee.h"
+#include <array>
+
 using namespace std;
 
 class Tournament {
 
-    protected:
+    private:
         char move;
+        int Score1 = 0;
+        int Score2 = 0;
+        char result;
+
+        Player *versus(Player* comp1, Player* comp2);
+
+        array<Player*, 4> semi;
+        array<Player*, 4> final;
+
+        Player* winner;
+
     public:
         Tournament();
-        char run(int *Players, int size, string competitors);
+        Player* run(std::array<Player*, 8>  competitors);
         ~Tournament();
 };
 

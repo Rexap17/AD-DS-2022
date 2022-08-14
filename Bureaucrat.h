@@ -13,6 +13,7 @@ protected:
 public:
     Bureaucrat();
     char makeMove();
+    string getName();
     ~Bureaucrat();
 };
 

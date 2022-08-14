@@ -10,4 +10,10 @@ char Computer::makeMove(){
     return move;
 };
 
+string Computer::getName() {
+    return "Computer";
+};
+
+void Computer::reset() {};
+
 Computer::~Computer(){};

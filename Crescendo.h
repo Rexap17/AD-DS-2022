@@ -9,11 +9,13 @@ using namespace std;
 class Crescendo :public Computer {
 
 protected:
-    int randNum;
+    int num;
     char move;
 public:
     Crescendo();
     char makeMove();
+    string getName();
+    void reset();
     ~Crescendo();
 };
 

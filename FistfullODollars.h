@@ -14,6 +14,8 @@ protected:
 public:
     FistfullODollars();
     char makeMove();
+    string getName();
+    void reset();
     ~FistfullODollars();
 };
 

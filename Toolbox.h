@@ -13,6 +13,7 @@ protected:
 public:
     Toolbox();
     char makeMove();
+    string getName();
     ~Toolbox();
 };
 
