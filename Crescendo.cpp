@@ -7,17 +7,18 @@ class Crescendo :public Computer{
     
 public:
     int randNum = 0;
+    char move;
     Crescendo() {};
 
     char makeMove() {
         if (randNum % 3 == 0) {
-            char move = 'R';
+            move = 'R';
         }
         else if(randNum % 2 == 0) {
-            char move = 'S';
+            move = 'S';
         }
         else if(randNum % 1 == 0){
-            char move = 'P';
+            move = 'P';
         }
         return move;
     };

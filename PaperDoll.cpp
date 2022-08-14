@@ -7,17 +7,18 @@ class PaperDoll :public Computer{
     
 public:
     int randNum = 0;
+    char move;
     PaperDoll() {};
 
     char makeMove() {
         if (randNum % 3 == 0) {
-            char move = 'S';
+            move = 'S';
         }
         else if(randNum % 2 == 0) {
-            char move = 'S';
+            move = 'S';
         }
         else if(randNum % 1 == 0){
-            char move = 'P';
+            move = 'P';
         }
         return move;
     };
