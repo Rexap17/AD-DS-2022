@@ -19,7 +19,6 @@ public:
             cout << "Rand: " << temp << endl;
         }*/
 
-        cout << "Rand: " << randNum << endl;
         if (randNum == 0) {
             move = 'R';
         }

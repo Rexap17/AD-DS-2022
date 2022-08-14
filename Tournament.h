@@ -10,7 +10,7 @@ class Tournament {
         char move;
     public:
         Tournament();
-        char run();
+        char run(int *Players, int size, string competitors);
         ~Tournament();
 };
 

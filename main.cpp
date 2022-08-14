@@ -12,8 +12,6 @@
 #include "PaperDoll.cpp"
 #include "FistfullODollars.cpp"
 
-
-
 using namespace std;
 
 int main(){
@@ -23,9 +21,10 @@ int main(){
     Referee r1;
     RandomComputer rc1;
 
-    cout << rc1.makeMove() << endl;
+    //cout << rc1.makeMove() << endl;
 
-    //int result  = r1.refGame(h1,c1);
+    int result  = r1.refGame(h1,c1);
+    cout << result << endl;
 
     return 0;
 }
