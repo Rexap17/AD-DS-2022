@@ -3,8 +3,9 @@
 #include <iostream>
 
 using namespace std;
+#include "Player.h"
 
-class Computer{
+class Computer:public Player{
 
     protected:
         char move;

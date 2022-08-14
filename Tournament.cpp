@@ -10,20 +10,20 @@ Player* Tournament::versus(Player* comp1, Player* comp2) {
 
     Referee referee;
 
-    comp1Score = 0;
-    comp2Score = 0;
+    Score1 = 0;
+    Score2 = 0;
 
     for (int i=0; i<5; i++) {
         result = referee.refGame(comp1, comp2);
 
         if (result == 'W') {
-            comp1Score += 1;
+            Score1 += 1;
         }
         else if (result == 'L') {
-            comp2Score += 1;
+            Score2 += 1;
         }
 
-        if (comp1Score >= comp2Score) {
+        if (Score1 >= Score2) {
 
             return comp1;
         }
