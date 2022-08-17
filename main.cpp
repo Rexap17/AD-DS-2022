@@ -18,7 +18,7 @@ int main(){
     
     Book B1(name,author);
     L1.addDocument(B1);
-    cout << L1.hasDocument(B1) << endl;
+    L1.hasDocument(B1);
 
     return 0;
 }
