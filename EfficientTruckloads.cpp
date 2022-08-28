@@ -4,7 +4,7 @@
 EfficientTruckloads::EfficientTruckloads(){}
 
 int EfficientTruckloads::numTrucks(int numCrates, int loadSize){
-  static vector<int> calcTable;
+  //static vector<int> calcTable;
 
   int crate1,crate2;
   if (numCrates <= 0 || loadSize <= 0){
