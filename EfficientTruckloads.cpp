@@ -1,9 +1,11 @@
-#include "Truckloads.h"
+#include "EfficientTruckloads.h"
 #include <iostream>
 
-Truckloads::Truckloads(){}
+EfficientTruckloads::EfficientTruckloads(){}
 
-int Truckloads::numTrucks(int numCrates, int loadSize){
+int EfficientTruckloads::numTrucks(int numCrates, int loadSize){
+  static vector<int> calcTable;
+
   int crate1,crate2;
   if (numCrates <= 0 || loadSize <= 0){
     return -1;

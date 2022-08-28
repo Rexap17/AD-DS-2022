@@ -15,14 +15,17 @@ int Reverse::reverseDigit(int num){
     reverseDigit(num/10); 
     reverseNum += (num%10)*pos; 
     pos *= 10; 
+  }else{
+    return -1;
   }
   return reverseNum;
 }
 
 
 std::string Reverse::reverseString(std::string str){
-  
-  if(str.size() <= 1){
+  if(str.size() <= 0){
+    return "ERROR";
+  }else if(str.size() <= 1){
     return str;
   }else{
     return reverseString(str.substr(1,str.length())) + str.at(0);
