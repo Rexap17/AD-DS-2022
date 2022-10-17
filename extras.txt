@@ -1,0 +1,28 @@
+/*for (int i = 0; i < 4; i++) {
+
+    if (static_cast<int>(new_input[i]) < 65) {
+      defaultStack[i] = new_input[i];
+    }
+
+    else if (static_cast<int>(new_input[i]) >= 65) {
+      flag = true;
+
+      if (new_input[i] == 'A' && new_input[i + 1] == 'F') {
+        // Enter AF function, 3 and 5 being the thing
+      } else if (new_input[i] == 'A' && new_input[i + 1] == 'E') {
+        // Enter AE function
+      } else if (new_input[i] == 'A' && new_input[i + 1] == 'P') {
+        // Enter AP function
+      } else if (new_input[i] == 'S') {
+        // Enter S function
+      } else if (new_input[i] == 'D' && new_input[i + 1] == 'F') {
+        // Enter DF function
+      } else if (new_input[i] == 'D' && new_input[i + 1] == 'E') {
+        // 
+      } else if (new_input[i] == 'D' && new_input[i + 1] == 'P') {
+        // Enter DP function
+      } else if (new_input[i] == 'G' && new_input[i + 1] == 'I') {
+        // Enter GI function
+      }
+    }
+  }*/
