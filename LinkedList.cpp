@@ -1,4 +1,4 @@
-#include "LinkList.h"
+#include "LinkedList.h"
 #include <iostream>
 #include <stack>
 

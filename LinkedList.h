@@ -1,12 +1,12 @@
-#ifndef LINKLIST_H
-#define LINKLIST_H
+#ifndef LINKEDLIST_H
+#define LINKEDLIST_H
 #include "Node.h"
 #include <array>
 #include <stack>
 
 class LinkList {
 public:
-  bool head_FLAG; 
+  bool head_FLAG;
 
   Node *head;
   std::stack<int> stack;
