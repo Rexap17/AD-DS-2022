@@ -33,8 +33,18 @@ void copyVector(vector<string> vect1, vector<string> vect2) {
     vect2.push_back(vect1[i]);
 }
 
+int findMax(vector<string> vect) {
+  int max = 0;
+  for (string i : vect) {
+    int temp = stoi(i);
+    if (temp > max) {
+      max = temp;
+    }
+  }
+  return max;
+}
+
 int main() {
-  std::cout << "Hello World!\n";
 
   vector<string> input;
   stack<string> operatorStack;
@@ -62,8 +72,10 @@ int main() {
     input.erase(input.begin());
   }
 
+  int max = findMax(input);
+
   int evalCount = count + 1;
-  if (input.size() != evalCount) {
+  if (input.size() != evalCount || input.size() == 0 || max > 99) {
     cout << "Error" << endl;
   } else {
     // testing output
@@ -90,7 +102,6 @@ int main() {
         result = stoi(processInput[0]) / stoi(processInput[1]);
       }
       string stringResult = to_string(result);
-      cout << result << endl;
 
       operatorStackCopy.pop();
 
@@ -108,6 +119,9 @@ int main() {
       operatorStack.pop();
       cout << " " << operatorStack.top() << " " << input[2] << " = " << result
            << endl;
+    } else if (count < 2) {
+      cout << input[0] << " " << operatorStack.top() << " " << input[1] << " = "
+           << result;
     }
   }
 }
