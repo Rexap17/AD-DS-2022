@@ -1,3 +1,4 @@
+#include <ctype.h>
 #include <iostream>
 #include <sstream>
 #include <stack>
@@ -28,11 +29,6 @@ void printStack(stack<string> stack) {
   }
 }
 
-void copyVector(vector<string> vect1, vector<string> vect2) {
-  for (int i = 0; i < vect1.size(); i++)
-    vect2.push_back(vect1[i]);
-}
-
 int findMax(vector<string> vect) {
   int max = 0;
   for (string i : vect) {
@@ -43,6 +39,16 @@ int findMax(vector<string> vect) {
   }
   return max;
 }
+int findMin(vector<string> vect) {
+  int min = 99;
+  for (string i : vect) {
+    int temp = stoi(i);
+    if (temp < min) {
+      min = temp;
+    }
+  }
+  return min;
+}
 
 int main() {
 
@@ -50,6 +56,7 @@ int main() {
   stack<string> operatorStack;
   string letters;
   const char space = ' ';
+  bool error = false;
 
   getline(cin, letters);
   stringstream ss(letters);
@@ -60,24 +67,44 @@ int main() {
   int size = input.size();
 
   int count = 0;
-  for (string i : input)
+  for (string i : input) {
     if (i == "+" || i == "-" || i == "*" || i == "/") {
       operatorStack.push(i);
       count++;
     } else {
       break;
     }
+  }
 
   for (int i = 0; i < count; i++) {
     input.erase(input.begin());
   }
 
-  int max = findMax(input);
+  for (string i : input) {
+    try {
+      int temp = stoi(i);
+    } catch (...) {
+      error = true;
+      break;
+    }
+  }
+
+  int max = 0;
+  int min = 0;
+
+  if (error == false) {
+    max = findMax(input);
+    min = findMin(input);
+  }
 
   int evalCount = count + 1;
-  if (input.size() != evalCount || input.size() == 0 || max > 99) {
+  if (input.size() != evalCount || input.size() == 0 || max > 99 || min < 0 ||
+      error == true) {
+
     cout << "Error" << endl;
+
   } else {
+
     // testing output
     // printStack(operatorStack);
     // printVector(input);
@@ -113,15 +140,17 @@ int main() {
       processInput.insert(processInput.begin(), stringResult);
     }
 
-    if (count >= 2) {
+    if (count == 2) {
       cout << "(" << input[0] << " " << operatorStack.top() << " " << input[1]
            << ")";
       operatorStack.pop();
       cout << " " << operatorStack.top() << " " << input[2] << " = " << result
            << endl;
-    } else if (count < 2) {
+    } else if (count == 1) {
       cout << input[0] << " " << operatorStack.top() << " " << input[1] << " = "
            << result;
+    } else {
+      cout << "Error" << endl;
     }
   }
 }
