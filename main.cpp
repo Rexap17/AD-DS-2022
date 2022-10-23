@@ -140,12 +140,21 @@ int main() {
       processInput.insert(processInput.begin(), stringResult);
     }
 
-    if (count == 2) {
+    if (count == 2 && operatorStack.top() == "+" ||
+        operatorStack.top() == "-") {
       cout << "(" << input[0] << " " << operatorStack.top() << " " << input[1]
            << ")";
       operatorStack.pop();
       cout << " " << operatorStack.top() << " " << input[2] << " = " << result
            << endl;
+    } else if (count == 2) {
+      cout << input[0] << " " << operatorStack.top() << " " << input[1];
+      operatorStack.pop();
+      cout << " " << operatorStack.top() << " " << input[2] << " = " << result
+           << endl;
+    } else if (count == 1) {
+      cout << input[0] << " " << operatorStack.top() << " " << input[1] << " = "
+           << result;
     } else if (count == 1) {
       cout << input[0] << " " << operatorStack.top() << " " << input[1] << " = "
            << result;
