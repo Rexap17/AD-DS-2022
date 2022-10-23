@@ -140,6 +140,16 @@ int main() {
       processInput.insert(processInput.begin(), stringResult);
     }
 
+    stack<string> tempStack;
+
+    tempStack.push(operatorStack.top());
+    operatorStack.pop();
+
+    string nextOpreator = operatorStack.top();
+
+    operatorStack.push(tempStack.top());
+    tempStack.pop();
+
     if (count == 3) {
       cout << input[0] << " " << operatorStack.top() << " " << input[1];
       operatorStack.pop();
@@ -148,7 +158,8 @@ int main() {
       cout << " " << operatorStack.top() << " " << input[3] << " = " << result
            << endl;
     } else if (count == 2 && operatorStack.top() == "+" ||
-               operatorStack.top() == "-") {
+               operatorStack.top() == "-" && nextOpreator == "*" ||
+               nextOpreator == "/") {
       cout << "(" << input[0] << " " << operatorStack.top() << " " << input[1]
            << ")";
       operatorStack.pop();
